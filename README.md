@@ -4,6 +4,7 @@ Status: Self-Initiated, Independently Built
 
 
 This project builds an end-to-end ML pipeline to predict Florida home values, discover market segments via clustering, deploy the model on Azure ML, and visualize insights through Tableau dashboards.
+
 **Dataset** : homes.csv
 
 ---
