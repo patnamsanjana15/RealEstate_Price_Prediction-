@@ -1,0 +1,28 @@
+$schema: https://azuremlschemas.azureedge.net/latest/batchDeployment.schema.json
+name: lasso-deploy
+endpoint_name: lasso-batch-003947
+
+model:
+  path: azureml:lasso_value_model:1
+
+compute: azureml:cpu-cluster
+
+environment:
+  name: lasso-env
+  version: 1
+  path: .
+  conda_file: environment.yaml
+
+code_configuration:
+  code: .
+  scoring_script: score.py
+
+mini_batch_size: "1"
+max_concurrency_per_instance: 1
+
+output_action: append_row
+output_file_name: predictions.csv
+
+retry_settings:
+  timeout: 300
+  max_retries: 3

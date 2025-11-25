@@ -1,0 +1,4 @@
+$schema: https://azuremlschemas.azureedge.net/latest/batchEndpoint.schema.json
+name: lasso-batch-003947
+description: Batch endpoint for housing predictions
+auth_mode: aad_token
